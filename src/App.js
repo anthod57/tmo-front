@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Navbar } from "./components/Navbar";
+import { ThemeProvider } from "styled-components"
+import { GlobalStyle, Theme } from "./styles/GlobalStyle"
+import { Hero } from "./components/Hero";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={Theme}>
+        <GlobalStyle />
+        <main>
+          <Navbar></Navbar>
+          <Hero></Hero>
+        </main>
+      </ThemeProvider>
+      <link href="http://fonts.cdnfonts.com/css/toinen-tammikuu" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
     </div>
   );
 }
