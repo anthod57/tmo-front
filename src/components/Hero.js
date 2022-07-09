@@ -6,10 +6,6 @@ export const Hero = () => {
 
     const [showPopup, setshowPopup] = useState(false);
 
-    useEffect(() => {
-        console.info(showPopup);
-    }, [showPopup])
-
     return (
         <>
             <Container>

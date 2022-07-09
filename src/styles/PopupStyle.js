@@ -29,6 +29,7 @@ export const Wrapper = styled.div`
     padding: 1rem;
     gap: 0.5rem;
     margin: auto;
+    position: relative;
 
     span {
         text-align: center;
@@ -39,5 +40,17 @@ export const Wrapper = styled.div`
     label {
         align-self: start;
         font-size: 0.9rem;
+    }
+
+    .close-button {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.75rem;
+        transition: 0.3s all;
+
+        &:hover {
+            color: ${props => props.theme.blue1};
+        }
     }
 `;
