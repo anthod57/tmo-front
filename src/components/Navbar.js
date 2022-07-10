@@ -8,14 +8,14 @@ export const Navbar = () => {
                 <Wrapper>
                     <ul className="left">
                         <li><a href="">ACCUEIL</a></li>
-                        <li><a href="">HERO</a></li>
+                        <li><a href="#hero">HERO</a></li>
                     </ul>
 
                     <h2><a href="/">LOGO</a></h2>
 
                     <ul className="right">
-                        <li><a href="">TODO</a></li>
-                        <li><a href="">FOOTER</a></li>
+                        <li><a href="#todos">TODOS</a></li>
+                        <li><a href="#footer">FOOTER</a></li>
                     </ul>
                 </Wrapper>
             </Container>

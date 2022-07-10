@@ -30,6 +30,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         overflow-x: hidden;
         font-weight: 300;
+        width: 100%;
+        height: 100%;
     }
 
     main {

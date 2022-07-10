@@ -5,6 +5,10 @@ export const Container = styled.section`
     height: 400px;
     background-color: #f8f8f8;
     padding: 1rem;
+
+    @media screen and (max-width: 960px){
+        height: 100%;
+    }
 `;
 
 export const Wrapper = styled.div`
@@ -60,6 +64,29 @@ export const Wrapper = styled.div`
         h1 {
             color: ${props => props.theme.blue1};
             margin-bottom: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 960px){
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+
+        .left, .right {
+            width: 100%;
+        }
+
+        .hero-text {
+
+            button {
+                margin: auto;
+                margin-top: 1rem;
+            }
+        }
+
+        .hero-image {
+            position: relative;
         }
     }
 `;

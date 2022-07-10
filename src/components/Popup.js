@@ -9,11 +9,24 @@ export const Popup = (props) => {
     const [lastName, setLastName] = useState(null);
     const [message, setMessage] = useState(null);
 
+    const isEmailValid = (email) => {
+        return String(email)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+    };
+
     const Subscribe = () => {
         setMessage(null);
 
         if (!email && !firstName && !lastName) {
             setMessage("Veuillez remplir tous les champs.");
+            return;
+        }
+
+        if (!isEmailValid(email)) {
+            setMessage("Veuillez entrer une adresse email valide.");
             return;
         }
 

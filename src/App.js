@@ -2,6 +2,7 @@ import { Navbar } from "./components/Navbar";
 import { ThemeProvider } from "styled-components"
 import { GlobalStyle, Theme } from "./styles/GlobalStyle"
 import { Hero } from "./components/Hero";
+import { Todos } from "./components/Todos";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <main>
           <Navbar></Navbar>
           <Hero></Hero>
+          <Todos></Todos>
         </main>
       </ThemeProvider>
       <link href="http://fonts.cdnfonts.com/css/toinen-tammikuu" rel="stylesheet" />

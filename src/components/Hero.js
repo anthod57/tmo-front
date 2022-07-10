@@ -8,7 +8,7 @@ export const Hero = () => {
 
     return (
         <>
-            <Container>
+            <Container id="hero">
                 <Wrapper>
                     <div className="left">
                         <div className="hero-text">
