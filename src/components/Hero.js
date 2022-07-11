@@ -25,9 +25,9 @@ export const Hero = () => {
                     </div>
                 </Wrapper>
             </Container>
-            {showPopup ?
-                (<Popup changeState={setshowPopup}></Popup>)
-                : ""}
+
+            {/* Show newsletter registration popup if button is clicked */}
+            {showPopup && (<Popup changeState={setshowPopup}></Popup>)}
         </>
     )
 }

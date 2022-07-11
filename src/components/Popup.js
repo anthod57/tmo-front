@@ -9,6 +9,7 @@ export const Popup = (props) => {
     const [lastName, setLastName] = useState(null);
     const [message, setMessage] = useState(null);
 
+    // Check if the provided email address is in the right format using REGEX
     const isEmailValid = (email) => {
         return String(email)
             .toLowerCase()
@@ -59,12 +60,16 @@ export const Popup = (props) => {
                     <div className="close-button">
                         <i class="fa-solid fa-xmark" onClick={() => props.changeState(false)}></i>
                     </div>
+
                     <h3>Newsletter</h3>
                     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+
                     <label htmlFor="email">Email:</label><input type="email" name="email" placeholer="Email" onChange={(e) => setEmail(e.target.value)} />
                     <label htmlFor="email">Prénom:</label><input type="text" name="firstname" placeholer="Prénom" onChange={(e) => setFirstName(e.target.value)} />
                     <label htmlFor="email">Nom:</label><input type="text" name="lastname" placeholer="Nom" onChange={(e) => setLastName(e.target.value)} />
+
                     <span className="message">{message}</span>
+
                     <button onClick={() => Subscribe()}>S'inscrire</button>
                 </Wrapper>
             </Container>
