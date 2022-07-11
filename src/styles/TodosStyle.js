@@ -4,6 +4,29 @@ export const Container = styled.section`
     width: 100%;
     height: 100%;
     padding: 1rem;
+    min-height: 1000px;
+    position: relative;
+
+    .custom-shape-divider-bottom-1657546375 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1657546375 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 69px;
+}
+
+.custom-shape-divider-bottom-1657546375 .shape-fill {
+    fill: ${props => props.theme.blue1};
+}
 
 `;
 

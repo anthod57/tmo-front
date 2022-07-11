@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Container, Wrapper } from '../styles/HeroStyle'
 import { Popup } from './Popup';
 

@@ -8,7 +8,7 @@ export const Todo = (props) => {
 
     useEffect(() => {
         setChecked(props.todo.completed)
-    }, [])
+    }, [props.todo.completed])
 
     return (
         <>
