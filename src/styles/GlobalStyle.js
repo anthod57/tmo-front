@@ -32,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 300;
         width: 100%;
         height: 100%;
+        scroll-behavior: smooth;
+
     }
 
     main {

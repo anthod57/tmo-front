@@ -34,7 +34,7 @@ export const Todos = () => {
         <>
             <Container id="todos">
                 <Wrapper>
-                    <h2>Todos</h2>
+                    <h2>Todo List</h2>
 
                     <Navigation>
                         {todos.map((page, index) => {
