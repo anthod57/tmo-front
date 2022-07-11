@@ -9,31 +9,27 @@ function App() {
     <div className="App">
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
+        <Navbar menu={
+          [
+            {
+              link: "/",
+              text: "Accueil",
+            },
+            {
+              link: "#hero",
+              text: "Hero Newsletter",
+            },
+            {
+              link: "#todos",
+              text: "Todo List",
+            },
+            {
+              link: "#footer",
+              text: "Footer",
+            },
+          ]
+        }></Navbar>
         <main>
-          <Navbar menu={
-            [
-              {
-                link: "/",
-                text: "Accueil",
-                side: "left"
-              },
-              {
-                link: "#hero",
-                text: "Hero Newsletter",
-                side: "left"
-              },
-              {
-                link: "#todos",
-                text: "Todo List",
-                side: "right"
-              },
-              {
-                link: "#footer",
-                text: "Footer",
-                side: "right"
-              },
-            ]
-          }></Navbar>
           <Hero></Hero>
           <Todos></Todos>
         </main>

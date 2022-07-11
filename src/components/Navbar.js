@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Wrapper } from '../styles/NavbarStyle'
 
 export const Navbar = (props) => {
+
+
+    const [showMobileMenu, setShowMobileMenu] = useState(false)
+
     return (
         <>
             <Container>
+
+                <div className="mobile-menu-button">
+                    <i className="fa-solid fa-bars" onClick={() => setShowMobileMenu(!showMobileMenu)}></i>
+                </div>
                 <Wrapper>
                     <ul className="left">
-                        {props.menu.filter(x => x.side === "left").map((item, index) => {
-                            return (<li><a href={item.link}>{item.text}</a></li>);
-                        })}
+
+                        <h2><a href="/">LOGO</a></h2>
                     </ul>
-
-                    <h2><a href="/">LOGO</a></h2>
-
-                    <ul className="right">
-                        {props.menu.filter(x => x.side === "right").map((item, index) => {
-                            return (<li><a href={item.link}>{item.text}</a></li>);
+                    <ul className={`right ${showMobileMenu ? "show" : ""}`}>
+                        {props.menu.map((item, index) => {
+                            return (<li key={index}><a href={item.link} onClick={() => setShowMobileMenu(false)}>{item.text}</a></li>);
                         })}
                     </ul>
                 </Wrapper>

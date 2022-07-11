@@ -28,7 +28,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
         color: ${Theme.blue2};
         font-size: 16px;
-        overflow-x: hidden;
         font-weight: 300;
         width: 100%;
         height: 100%;
@@ -42,6 +41,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: auto;
         overflow-x: hidden;
         min-height: 100vh;
+        padding-top: 80px;
     }
 
     button {
