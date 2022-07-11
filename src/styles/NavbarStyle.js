@@ -40,11 +40,6 @@ export const Wrapper = styled.div`
         font-weight: 300;
         font-size: 3rem;
         color: white;
-        transition: 0.6s all;
-
-        &:hover {
-            transform: scale(1.05);
-        }
 
         a {
             text-decoration: none;

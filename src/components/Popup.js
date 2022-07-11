@@ -20,7 +20,7 @@ export const Popup = (props) => {
     const Subscribe = () => {
         setMessage(null);
 
-        if (!email && !firstName && !lastName) {
+        if (!email || !firstName || !lastName) {
             setMessage("Veuillez remplir tous les champs.");
             return;
         }
@@ -61,9 +61,9 @@ export const Popup = (props) => {
                     </div>
                     <h3>Newsletter</h3>
                     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                    <label for="email">Email:</label><input type="email" name="email" placeholer="Email" onChange={(e) => setEmail(e.target.value)} />
-                    <label for="email">Prénom:</label><input type="text" name="firstname" placeholer="Prénom" onChange={(e) => setFirstName(e.target.value)} />
-                    <label for="email">Nom:</label><input type="text" name="lastname" placeholer="Nom" onChange={(e) => setLastName(e.target.value)} />
+                    <label htmlFor="email">Email:</label><input type="email" name="email" placeholer="Email" onChange={(e) => setEmail(e.target.value)} />
+                    <label htmlFor="email">Prénom:</label><input type="text" name="firstname" placeholer="Prénom" onChange={(e) => setFirstName(e.target.value)} />
+                    <label htmlFor="email">Nom:</label><input type="text" name="lastname" placeholer="Nom" onChange={(e) => setLastName(e.target.value)} />
                     <span className="message">{message}</span>
                     <button onClick={() => Subscribe()}>S'inscrire</button>
                 </Wrapper>
